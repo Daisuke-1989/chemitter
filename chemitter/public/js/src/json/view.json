@@ -1,0 +1,628 @@
+{
+	"version": "2.51.0",
+	"grid": {
+		"xWidth": 10,
+		"yHeight": 10,
+		"layers": {
+			"Default layer": {
+				"name": "Default layer"
+			},
+			"BrowseErrors": {
+				"name": "BrowseErrors"
+			},
+			"Admin": {
+				"name": "Admin"
+			}
+		}
+	},
+	"modules": [
+		{
+			"url": "modules/types/science/chemistry/jsme/",
+			"id": 1,
+			"title": "Draw a structure",
+			"configuration": {
+				"sections": {},
+				"groups": {
+					"group": [
+						{
+							"prefs": [
+								[
+									"oldlook",
+									"polarnitro"
+								]
+							],
+							"defaultaction": [
+								null
+							],
+							"labelsize": [
+								14
+							],
+							"bondwidth": [
+								1
+							],
+							"highlightColor": [
+								"3"
+							],
+							"outputResult": [
+								[]
+							]
+						}
+					]
+				}
+			},
+			"layers": {
+				"Default layer": {
+					"zIndex": 0,
+					"display": true,
+					"title": "Draw a structure",
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer",
+					"position": {
+						"left": 0,
+						"top": 0
+					},
+					"size": {
+						"width": 34,
+						"height": 32
+					},
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					]
+				},
+				"BrowseErrors": {
+					"zIndex": 0,
+					"display": false,
+					"title": "Draw a structure",
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer",
+					"position": {
+						"left": 0,
+						"top": 0
+					},
+					"size": {
+						"width": 50,
+						"height": 41
+					},
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					]
+				},
+				"Admin": {
+					"zIndex": 0,
+					"display": true,
+					"title": "Draw a structure",
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer",
+					"position": {
+						"left": 0,
+						"top": 0
+					},
+					"size": {
+						"width": 34,
+						"height": 32
+					},
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					]
+				}
+			},
+			"vars_in": [
+				{
+					"rel": "mol",
+					"name": "selectedMol"
+				}
+			],
+			"actions_in": [
+				{}
+			],
+			"vars_out": [
+				{
+					"event": "onStructureChange",
+					"rel": "mol",
+					"jpath": [],
+					"filter": "searchFilter",
+					"name": "query"
+				}
+			],
+			"actions_out": [
+				{
+					"jpath": []
+				}
+			],
+			"zindex": 2,
+			"toolbar": {
+				"custom": [
+					[
+						{
+							"title": "",
+							"icon": "",
+							"action": "",
+							"position": "begin"
+						}
+					]
+				],
+				"common": [
+					{
+						"toolbar": [
+							[]
+						]
+					}
+				]
+			}
+		},
+		{
+			"url": "modules/types/edition/slick_grid/",
+			"configuration": {
+				"sections": {},
+				"groups": {
+					"group": [
+						{
+							"slickCheck": [
+								[
+									"rowNumbering",
+									"forceFitColumns",
+									"backToTop",
+									"enableCellNavigation",
+									"forgetLastActive",
+									"highlightScroll"
+								]
+							],
+							"autoColumns": [
+								[]
+							],
+							"toolbar": [
+								[]
+							],
+							"colorjpath": [
+								[]
+							],
+							"slick.defaultColumnWidth": [
+								null
+							],
+							"slick.rowHeight": [
+								"150"
+							],
+							"slick.selectionModel": [
+								"row"
+							],
+							"filterType": [
+								"pref"
+							],
+							"filterRow": [
+								"// Documentation: https://github.com/NPellet/visualizer/blob/db85d9cc12c6204e4a3afb69bba6d695f6f8bad5/src/modules/types/edition/slick_grid/view.js#L918-L940"
+							]
+						}
+					],
+					"cols": [
+						[
+							{
+								"name": "Structure",
+								"jpath": [
+									"actID"
+								],
+								"editor": "none",
+								"forceType": "",
+								"formatter": "typerenderer",
+								"visibility": "both",
+								"rendererOptions": "",
+								"width": 250,
+								"minWidth": "250",
+								"maxWidth": "250",
+								"hideColumn": []
+							},
+							{
+								"name": "Article name",
+								"jpath": [
+									"name"
+								],
+								"editor": "none",
+								"forceType": "",
+								"formatter": "typerenderer",
+								"visibility": "both",
+								"rendererOptions": "",
+								"width": 80,
+								"hideColumn": []
+							}
+						]
+					],
+					"actionCols": [
+						[
+							{
+								"backgroundColor": [
+									255,
+									255,
+									255,
+									1
+								],
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"position": "end"
+							}
+						]
+					],
+					"groupings": [
+						[
+							{
+								"getter": [
+									""
+								]
+							}
+						]
+					],
+					"actionOutButtons": [
+						[
+							{}
+						]
+					]
+				}
+			},
+			"layers": {
+				"Default layer": {
+					"position": {
+						"left": 0,
+						"top": 48
+					},
+					"size": {
+						"width": 50,
+						"height": 46
+					},
+					"zIndex": 0,
+					"display": true,
+					"title": "Result",
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					],
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer"
+				},
+				"BrowseErrors": {
+					"position": {
+						"left": 0,
+						"top": 48
+					},
+					"size": {
+						"width": 50,
+						"height": 46
+					},
+					"zIndex": 0,
+					"display": false,
+					"title": "Result",
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					],
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer"
+				},
+				"Admin": {
+					"position": {
+						"left": 0,
+						"top": 48
+					},
+					"size": {
+						"width": 50,
+						"height": 46
+					},
+					"zIndex": 0,
+					"display": true,
+					"title": "Result",
+					"bgColor": [
+						255,
+						255,
+						255,
+						0
+					],
+					"wrapper": true,
+					"created": true,
+					"name": "Default layer"
+				}
+			},
+			"id": 3,
+			"vars_in": [
+				{
+					"rel": "list",
+					"name": "searchResult"
+				}
+			],
+			"actions_in": [
+				{}
+			],
+			"title": "Result",
+			"vars_out": [
+				{
+					"event": "onSelect",
+					"rel": "row",
+					"jpath": [],
+					"name": "hover"
+				},
+				{
+					"event": "onSelect",
+					"rel": "row",
+					"jpath": [
+						"link"
+					],
+					"name": "link"
+				}
+			],
+			"actions_out": [
+				{
+					"event": "onSelect",
+					"rel": "row",
+					"jpath": [
+						"smiles"
+					],
+					"name": "updateFragment"
+				}
+			],
+			"zindex": 2,
+			"toolbar": {
+				"custom": [
+					[
+						{
+							"title": "",
+							"icon": "",
+							"action": "",
+							"position": "begin"
+						}
+					]
+				],
+				"common": [
+					{
+						"toolbar": [
+							[]
+						]
+					}
+				]
+			}
+		}
+	],
+	"variables": [
+		{
+			"varname": "molecules",
+			"jpath": [
+				"data",
+				"molecules"
+			]
+		},
+		{
+			"varname": "queryOptions",
+			"jpath": [
+				"queryOptions"
+			]
+		},
+		{
+			"varname": "query",
+			"jpath": [
+				"query"
+			]
+		},
+		{
+			"varname": "errors",
+			"jpath": [
+				"data",
+				"errors"
+			]
+		},
+		{
+			"varname": "fullA",
+			"jpath": [
+				"data",
+				"nogood"
+			]
+		},
+		{
+			"varname": "dupA",
+			"jpath": [
+				"data",
+				"dup"
+			]
+		},
+		{
+			"varname": "notfoundA",
+			"jpath": [
+				"data",
+				"notfound"
+			]
+		},
+		{
+			"varname": "count",
+			"jpath": [
+				"count"
+			]
+		}
+	],
+	"pouchvariables": [
+		{}
+	],
+	"configuration": {
+		"title": "Search wikipedia by substructure and similarity"
+	},
+	"actionscripts": [
+		{
+			"sections": {},
+			"groups": {
+				"action": [
+					{
+						"name": [
+							"openWikiID"
+						],
+						"script": [
+							"window.open('https://en.wikipedia.org/w/index.php?curid=' + value, '_blank')"
+						]
+					}
+				]
+			}
+		},
+		{
+			"sections": {},
+			"groups": {
+				"action": [
+					{
+						"name": [
+							"putMol"
+						],
+						"script": [
+							"require(['src/util/api', 'openchemlib/openchemlib-core'], function (API, OCL) {\n    var hover = API.getData('hover');\n    var act;\n    if (hover && (act = hover.get('actID'))) {\n        var mol = OCL.Molecule.fromIDCode(act.value + '', act.coordinates + '').toMolfile();\n        API.createData('customQueryOpts', {searchMode: 'Similarity'});\n        API.createData('queryOptions', {searchMode: 'Similarity'});\n        API.createData('selectedMol', {type: 'mol2d', value: mol});\n        API.createData('query', {type: 'mol2d', value: mol});\n    }\n});"
+						]
+					}
+				]
+			}
+		},
+		{
+			"sections": {},
+			"groups": {
+				"action": [
+					{
+						"name": [
+							"viewDrug"
+						],
+						"script": [
+							"require(['src/util/api'], function (API) {\n    var currentDrug = API.getData('hover');\n    if (currentDrug) {\n        var link = currentDrug.get('wiki').get() + '';\n        window.open(link, '_blank')\n    }\n});"
+						]
+					}
+				]
+			}
+		},
+		{
+			"sections": {},
+			"groups": {
+				"action": [
+					{
+						"name": [
+							"updateFragment"
+						],
+						"script": [
+							"require(['uri/URI'], function (URI) {\n    var url = new URI(window.location.href);\n    url.fragment(encodeURIComponent(value));\n    window.history.pushState(null, '', url.href());\n});"
+						]
+					}
+				]
+			}
+		}
+	],
+	"crons": [
+		{}
+	],
+	"couch_replication": [
+		{
+			"sections": {},
+			"groups": {
+				"couch": [
+					[
+						{
+							"direction": "both",
+							"continuous": []
+						}
+					]
+				]
+			}
+		}
+	],
+	"init_script": [
+		{
+			"sections": {},
+			"groups": {
+				"general": [
+					{
+						"script": [
+							"require([\n    'src/util/api',\n    'src/util/debug',\n    'openchemlib//openchemlib-core',\n    'components/async/lib/async',\n    'uri/URI'\n], function (API, Debug, OCL, async, URI) {\n    if (API.cache('db')) {\n        return;\n    }\n\n    var url = new URI(window.location.href);\n\n    function getName(value) {\n        value = value.replace(/_/g, ' ');\n        value = decodeURIComponent(value);\n        return value;\n    }\n\n    function toObj(val) {\n        return {id: val};\n    }\n\n    var errors = API.getData('errors');\n\n    var fullA = API.getData('fullA');\n    var full = fullA.map(toObj);\n\n    var el = errors.length;\n    var hid = 0;\n\n    for (var k = 0; k < el; k++) {\n        var id = errors[k].id;\n        var idx = fullA.indexOf(id);\n        if (idx > -1) {\n            var error = full[idx];\n            if (!error._highlight) {\n                error._highlight = [++hid];\n            } else {\n                error._highlight.push(++hid);\n            }\n            errors[k]._highlight = [hid];\n        } else {\n            errors[k]._highlight = [];\n        }\n    }\n\n    API.createData('full', full);\n    API.createData('dup', API.getData('dupA').map(toObj));\n    API.createData('notfound', API.getData('notfoundA').map(toObj));\n\n    var molecules = API.getData('molecules');\n    if (molecules && molecules.length) {\n        // ?mini=true => only 500 molecules for testing\n        var l = molecules.length;\n        if(document.location.search.indexOf('mini') > -1) {\n            l = Math.min(l, 500);\n        }\n        var db = new Array(l);\n        API.cache('db', db);\n        var timer = Debug.timer();\n        var i = 0, ii, molecule;\n\n        async.whilst(function () {\n            ii = Math.min(i + 1000, l);\n\n            for (; i < ii; i++) {\n                API.loading('mol', 'Loading molecules (' + (i + 1) + '/' + l + ')');\n                molecule = molecules[i];\n                // we will add the links in the molecules\n                molecule.link = 'https://en.wikipedia.org/api/rest_v1/page/html/' + molecule.code;\n                molecule.wiki = 'https://en.wikipedia.org/wiki/' + molecule.code;\n                molecule.name = getName(molecule.code);\n                molecule.lowName = molecule.name.toLowerCase();\n                var newEntry = {};\n                newEntry.molecule = OCL.Molecule.fromIDCode(molecule.actID.value, false);\n                newEntry.molecule.ensureHelperArrays(3);\n                newEntry.index = i;\n                db[i] = newEntry;\n            }\n\n            return ii !== l\n        }, function (callback) {\n            setImmediate(callback);\n        }, function () {\n            Debug.debug(timer.time('ms'));\n            var fragment = decodeURIComponent(url.fragment());\n            var query = {\n                type: 'mol2d',\n                value: ''\n            };\n            if (fragment) {\n                try {\n                    var mol = OCL.Molecule.fromSmiles(fragment);\n                    var molfile = mol.toMolfile();\n                    query.value = molfile;\n                    API.createData('selectedMol', {type: 'mol2d', value: molfile});\n                    API.createData('customQueryOpts', {searchMode: 'Similarity'});\n                    API.createData('queryOptions', {searchMode: 'Similarity'});\n                } catch (e) {}\n            } else {\n                API.createData('customQueryOpts', {searchMode: 'Substructure'});\n                API.createData('queryOptions',{searchMode: 'Substructure'});\n            }\n            API.createData('query', query, 'searchFilter');\n            API.stopLoading('mol');\n        });\n\n    }\n});"
+						]
+					}
+				]
+			}
+		}
+	],
+	"custom_filters": [
+		{
+			"sections": {
+				"modules": [
+					{
+						"sections": {},
+						"groups": {
+							"modules": [
+								[
+									{}
+								]
+							]
+						}
+					}
+				],
+				"filtersLib": [
+					{
+						"sections": {},
+						"groups": {
+							"filters": [
+								[
+									{}
+								]
+							]
+						}
+					}
+				],
+				"filters": [
+					{
+						"sections": {},
+						"groups": {
+							"filter": [
+								{
+									"name": [
+										"searchFilter"
+									],
+									"script": [
+										"return {\n    filter: function (value, resolve, reject) {\n\n        resolve(value);\n\n        var molfile, options;\n        if (value.__name === 'query') {\n            molfile = value;\n            options = API.getData('queryOptions');\n        } else if (value.__name === 'queryOptions') {\n            options = value;\n            molfile = API.getData('query');\n        }\n\n        if (!options) {\n            return;\n        }\n\n        var molecules = API.getData('molecules');\n\n        var result = [],\n            i, ii;\n            \n        var queryMol;\n        if (molfile) {\n            try {\n                queryMol = OCL.Molecule.fromMolfile(molfile.get() + '');\n            } catch (e) {}\n        }\n\n        if (!options || !queryMol || queryMol.getAllAtoms() === 0) {\n            for (i = 0, ii = molecules.length; i < ii; i++) {\n                result.push(molecules[i]);\n           }\n            return sendResult(result);\n        }\n\n        var mode = String(options.get('searchMode'));\n        var targetMW;\n\n        switch (mode) {\n            case 'Exact structure':\n            {\n                var idcode = queryMol.getIDCode();\n                for (i = 0, ii = molecules.length; i < ii; i++) {\n                    if (String(molecules[i].actID.value) === idcode) {\n                        result = [molecules[i]];\n                        break;\n                    }\n                }\n                break;\n            }\n            case 'Substructure':\n            {\n                targetMW = queryMol.getMolecularFormula().relativeWeight;\n                queryMol.setFragment(true);\n                var queryIndex = queryMol.getIndex();\n                var searcher = new OCL.SSSearcherWithIndex();\n                searcher.setFragment(queryMol, queryIndex);\n                var db = API.cache('db');\n                for (i = 0, ii = db.length; i < ii; i++) {\n                    var actmol = db[i].molecule,\n                        mol = molecules[db[i].index];\n                    searcher.setMolecule(actmol, mol.act_idx);\n                    if (searcher.isFragmentInMolecule()) {\n                        result.push(mol);\n                    }\n                }\n                result.sort(function (a, b) {\n                    return Math.abs(targetMW - a.mw) - Math.abs(targetMW - b.mw);\n                });\n            console.dir(result.slice(0,10));\n\n                break;\n            }\n            case 'Similarity':\n            {\n                var index = queryMol.getIndex();\n                targetMW = queryMol.getMolecularFormula().relativeWeight;\n                var targetID = queryMol.getIDCode();\n                var intermediate = [];\n                var similarity;\n                for (i = 0, ii = molecules.length; i < ii; i++) {\n                    if (String(molecules[i].actID.value) === targetID) {\n                        similarity = 1e10;\n                    } else {\n                        similarity = OCL.SSSearcherWithIndex.getSimilarityTanimoto(index, molecules[i].act_idx) * 100000 - Math.abs(targetMW - molecules[i].mw) / 1000;\n                    }\n                    intermediate.push([molecules[i], similarity]);\n                }\n                intermediate.sort(function (a, b) {\n                    return b[1] - a[1];\n                });\n\n                for (i = 0, ii = intermediate.length; i < ii; i++) {\n                    result.push(intermediate[i][0]);\n                }\n\n                break;\n            }\n        }\n\n        sendResult(result);\n\n        API.setVar('hover', ['searchResult', 0]);\n\n        function sendResult(result) {\n            var name = String(options.get('name')).toLowerCase();\n            if (name != 'undefined') { // filter by name\n                var oldResult = result;\n                result = [];\n                for (i = 0, ii = oldResult.length; i < ii; i++) {\n                    if (oldResult[i].lowName.indexOf(name) > -1) {\n                        result.push(oldResult[i]);\n                    }\n                }\n            }\n\n            // if there is some result we change the link, otherwise we blank it\n            if (result.length > 0) {\n                API.createData('link', result[0].link + '');\n            } else {\n                API.createData('link', null);\n            }\n\n            API.createData('searchResult', result.slice(0,10));\n        }\n\n    }\n};"
+									]
+								}
+							],
+							"libs": [
+								[
+									{
+										"lib": "openchemlib/openchemlib-core",
+										"alias": "OCL"
+									}
+								]
+							]
+						}
+					}
+				]
+			},
+			"groups": {}
+		}
+	],
+	"actionfiles": [
+		{
+			"sections": {},
+			"groups": {
+				"action": [
+					[
+						{}
+					]
+				]
+			}
+		}
+	],
+	"aliases": [
+		{}
+	]
+}
